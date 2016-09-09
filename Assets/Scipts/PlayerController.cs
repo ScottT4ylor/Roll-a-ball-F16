@@ -18,6 +18,14 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody> ();
 	}
 
+    void Update()
+    {
+        if(Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+    }
+
 	void FixedUpdate()
 	{
 		float moveHorizontal = Input.GetAxis ("Horizontal");
